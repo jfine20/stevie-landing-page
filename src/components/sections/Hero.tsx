@@ -41,10 +41,10 @@ export function Hero() {
                     <div className="w-px flex-shrink-0 bg-[var(--rule)]" />
                   )}
                   <div className="flex min-w-0 flex-1 flex-col gap-2">
-                    <div className="flex items-baseline gap-1.5 font-display text-[clamp(32px,3.2vw,44px)] leading-none tracking-[-0.02em] text-cobalt-ink">
+                    <div className="flex items-baseline gap-1.5 font-display text-[clamp(38px,3.8vw,52px)] leading-none tracking-[-0.02em] text-cobalt-ink">
                       {stat.num}
                       {stat.suffix && (
-                        <span className="font-sans text-[14px] font-semibold tracking-[0.01em] text-cobalt">
+                        <span className="font-sans text-[16px] font-semibold tracking-[0.01em] text-cobalt">
                           {stat.suffix}
                         </span>
                       )}

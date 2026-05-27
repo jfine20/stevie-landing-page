@@ -30,7 +30,7 @@ export const hero = {
   secondaryCta: { label: "See how it works", href: "#how" },
   stats: [
     { num: "1", suffix: "prompt", label: "Books your whole trip" },
-    { num: "All-in-one", suffix: "", label: "Flights, hotels, transfers" },
+    { num: "All", suffix: "in one", label: "Flights, hotels, transfers" },
     { num: "$0", suffix: "fees", label: "Best rates, always" },
   ],
   boardingPass: {

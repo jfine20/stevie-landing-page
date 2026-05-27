@@ -40,14 +40,16 @@ export function Hero() {
                   {i > 0 && (
                     <div className="w-px flex-shrink-0 bg-[var(--rule)]" />
                   )}
-                  <div className="flex min-w-0 flex-1 flex-col gap-[10px]">
-                    <div className="font-display text-[clamp(26px,2.8vw,38px)] leading-none tracking-[-0.02em] text-cobalt-ink">
+                  <div className="flex min-w-0 flex-1 flex-col gap-2">
+                    <div className="flex items-baseline gap-1.5 font-display text-[clamp(32px,3.2vw,44px)] leading-none tracking-[-0.02em] text-cobalt-ink">
                       {stat.num}
                       {stat.suffix && (
-                        <span className="ml-1 text-cobalt">{stat.suffix}</span>
+                        <span className="font-sans text-[14px] font-semibold tracking-[0.01em] text-cobalt">
+                          {stat.suffix}
+                        </span>
                       )}
                     </div>
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
+                    <div className="text-[11px] font-medium uppercase tracking-[0.16em] text-ink-soft">
                       {stat.label}
                     </div>
                   </div>

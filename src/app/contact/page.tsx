@@ -26,36 +26,11 @@ export default function ContactPage() {
                   General
                 </div>
                 <a
-                  href="mailto:hello@stevieai.io"
+                  href="mailto:dev@stevieai.io"
                   className="text-[16px] font-medium text-cobalt-ink underline underline-offset-2 hover:text-cobalt"
                 >
-                  hello@stevieai.io
+                  dev@stevieai.io
                 </a>
-              </div>
-              <div className="rounded-[12px] border border-[var(--rule)] bg-paper p-6">
-                <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-cobalt">
-                  Press
-                </div>
-                <a
-                  href="mailto:press@stevieai.io"
-                  className="text-[16px] font-medium text-cobalt-ink underline underline-offset-2 hover:text-cobalt"
-                >
-                  press@stevieai.io
-                </a>
-              </div>
-              <div className="rounded-[12px] border border-[var(--rule)] bg-paper p-6">
-                <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-cobalt">
-                  Security
-                </div>
-                <a
-                  href="mailto:hello@stevieai.io"
-                  className="text-[16px] font-medium text-cobalt-ink underline underline-offset-2 hover:text-cobalt"
-                >
-                  hello@stevieai.io
-                </a>
-                <p className="mt-1 text-[13px] text-ink-soft">
-                  Vulnerability reports welcome. We pay bounties for valid findings.
-                </p>
               </div>
             </div>
           </div>

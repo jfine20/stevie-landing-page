@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Button, ArrowIcon, PlaneIcon } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -35,11 +36,11 @@ export function Hero() {
               style={{ marginTop: 64 }}
             >
               {hero.stats.map((stat, i) => (
-                <>
+                <Fragment key={stat.num}>
                   {i > 0 && (
-                    <div key={`divider-${i}`} className="w-px flex-shrink-0 bg-[var(--rule)]" />
+                    <div className="w-px flex-shrink-0 bg-[var(--rule)]" />
                   )}
-                  <div key={stat.num} className="flex min-w-0 flex-1 flex-col gap-2">
+                  <div className="flex min-w-0 flex-1 flex-col gap-2">
                     <div className="flex items-baseline gap-1.5 font-display text-[clamp(28px,3vw,40px)] leading-none tracking-[-0.02em] text-cobalt-ink">
                       {stat.num}
                       <span className="font-sans text-[13px] font-medium tracking-[0.02em] text-cobalt">
@@ -50,7 +51,7 @@ export function Hero() {
                       {stat.label}
                     </div>
                   </div>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>

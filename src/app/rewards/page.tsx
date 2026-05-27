@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/Button";
 export const metadata = { title: "Rewards — Stevie" };
 
 const stats = [
-  { k: "35%", v: "of our margin, every booking" },
-  { k: "VOO · SPY", v: "fractional S&P 500, in your name" },
+  { k: "4¢", v: "per dollar, every booking" },
+  { k: "0", v: "blackout dates, ever" },
+  { k: "Cash", v: "redeemable, not points" },
   { k: "$0", v: "no fees, no minimums" },
-  { k: "Alpaca", v: "SEC-registered broker-dealer" },
 ];
 
 const howItWorks = [
@@ -21,13 +21,13 @@ const howItWorks = [
   },
   {
     number: "02",
-    title: "35% comes back to you.",
-    body: "On every booking, we allocate 35% of our margin to your brokerage account as fractional VOO or SPY — S&P 500 index funds.",
+    title: "You earn credit.",
+    body: "On every booking, you earn credit at a flat 4¢-per-dollar rate. No tiers, no blackout dates, no expiration.",
   },
   {
     number: "03",
-    title: "Your shares grow.",
-    body: "The account is held in your name through Alpaca Securities LLC. Transfer out, sell, or hold as long as you like. Nobody can devalue or expire them.",
+    title: "Cash it out.",
+    body: "Redeem your balance toward your next Stevie booking, or transfer it straight to your bank. Your choice, your timing.",
   },
 ];
 
@@ -42,15 +42,15 @@ export default function RewardsPage() {
             <div className="mx-auto max-w-[760px] text-center">
               <Eyebrow>Rewards</Eyebrow>
               <h1 className="mt-[18px] text-[clamp(36px,4.5vw,64px)] leading-[1.03] tracking-[-0.02em] text-cobalt-ink">
-                Points expire.{" "}
-                <em className="italic text-cobalt">Shares don't.</em>
+                Points that{" "}
+                <em className="italic text-cobalt">actually pay you back.</em>
               </h1>
               <p className="mx-auto mt-5 max-w-[52ch] text-[17px] leading-[1.6] text-ink-soft">
-                Every Stevie booking puts a real asset in your name — something that compounds while you're not looking, and that nobody can take back.
+                Forget watching your miles depreciate. Every Stevie booking earns credit at a flat 4¢-per-dollar rate — redeemable as cash, not coupons.
               </p>
               <div className="mt-8">
-                <Button href="https://stevieai.io/sign-in" variant="primary" size="lg">
-                  Get early access
+                <Button href="#book" variant="primary" size="lg">
+                  Book a Trip
                 </Button>
               </div>
             </div>
@@ -88,16 +88,6 @@ export default function RewardsPage() {
                 ))}
               </div>
             </div>
-          </Container>
-        </section>
-
-        {/* Disclosure */}
-        <section className="pb-16">
-          <Container>
-            <p className="mx-auto max-w-[640px] text-center text-[12px] leading-[1.6] text-ink-soft/70">
-              Securities are offered through Alpaca Securities LLC, member FINRA/SIPC. Stevie AI LLC is not a broker-dealer.
-              Investing involves risk, including loss of principal. Past performance is not indicative of future results.
-            </p>
           </Container>
         </section>
       </main>

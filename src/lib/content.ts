@@ -6,32 +6,32 @@
 export const site = {
   name: "Stevie",
   url: "https://stevieai.io",
-  tagline: "Every trip builds your portfolio.",
+  tagline: "One prompt. The whole trip.",
   description:
-    "Book hotels and flights through Stevie. A share of every booking buys you fractional S&P 500 stock in your own brokerage account.",
+    "Tell Stevie where you're going — it books your flights, hotels, transfers, and the dinners in between, all from a single chat.",
 } as const;
 
 export const nav = {
   links: [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Portfolio", href: "#portfolio" },
+    { label: "How it works", href: "#how" },
+    { label: "Features", href: "#features" },
     { label: "FAQ", href: "#faq" },
   ],
-  cta: { label: "Sign in", href: "https://stevieai.io/sign-in" },
+  cta: { label: "Book a Trip", href: "#book" },
 } as const;
 
 export const hero = {
   eyebrow: "Your AI Travel Concierge",
-  headlinePrefix: "Every trip builds",
-  headlineEmphasis: "your portfolio.",
+  headlinePrefix: "One prompt.",
+  headlineEmphasis: "The whole trip.",
   subhead:
-    "Tell Stevie where and when. We book the hotel or flight and buy you fractional shares of the S&P 500 in your own brokerage account — every time.",
-  primaryCta: { label: "Get started", href: "https://stevieai.io/sign-in" },
-  secondaryCta: { label: "How it works", href: "#how-it-works" },
+    "Tell Stevie where you're going — it books your flights, hotels, transfers, and the dinners in between, all from a single chat. One conversation, no tabs, no spreadsheets.",
+  primaryCta: { label: "Book a Trip", href: "#book" },
+  secondaryCta: { label: "See how it works", href: "#how" },
   stats: [
-    { num: "35", suffix: "%", label: "Of our margin, back to you" },
-    { num: "VOO", suffix: "· SPY", label: "S&P 500 index, in your name" },
-    { num: "$0", suffix: "fees", label: "No booking fee, ever" },
+    { num: "1", suffix: "prompt", label: "Books your whole trip" },
+    { num: "All-", suffix: "in-one", label: "Flights, hotels, transfers" },
+    { num: "0", suffix: "agent fees", label: "Best rates online, always" },
   ],
   boardingPass: {
     airline: "Stevie",
@@ -58,7 +58,7 @@ export const tryIt = {
   headingPrefix: "Describe your trip.",
   headingEmphasis: "Stevie finds it.",
   lede:
-    "Tell Stevie exactly what you want — quiet, walkable, under budget, near the water. It searches every option at once, books in a tap, and puts a share of our margin into your brokerage account.",
+    "Tell Stevie exactly what you want — quiet, walkable, under budget, near the water. It searches every airline and hotel at once, and books in a tap.",
   prompts: [
     "Long weekend somewhere warm, under $900, leaving Friday after work.",
     "Tokyo in cherry-blossom season, 8 days, mid-budget.",
@@ -74,28 +74,28 @@ export const tryIt = {
     { label: "Activities · soon", active: false },
   ],
   footer:
-    "Hotels are live now. Every booking earns you fractional S&P 500 shares — flights, transfers, and the rest are rolling out soon.",
+    "Hotels are bookable today. Flights, transfers, and the rest are rolling out next — your whole trip, one conversation.",
 } as const;
 
 export const howItWorks = {
   eyebrow: "How it works",
-  headingPrefix: "Three steps.",
-  headingEmphasis: "One loop.",
+  headingPrefix: "One sentence in,",
+  headingEmphasis: "a whole trip out.",
   steps: [
     {
       number: "01",
-      title: "Describe the trip.",
-      body: "Tell Stevie what you need. Dates, budget, a neighbourhood you like. Stevie searches, compares, and returns real options.",
+      title: "Type one sentence.",
+      body: "Tell Stevie what you want, in plain English.",
     },
     {
       number: "02",
-      title: "Book in one place.",
-      body: "Hotels and flights, charged to your card. Stevie is the merchant of record — no redirects, no affiliate handoffs.",
+      title: "See every option that fits.",
+      body: "Stevie lays out every trip that matches your ask — flights, hotels, and the full price upfront.",
     },
     {
       number: "03",
-      title: "Own the upside.",
-      body: "On each booking, 35% of our margin buys you fractional VOO or SPY in your own brokerage account. Every trip, every time.",
+      title: "Confirm. Pack. Go.",
+      body: "One tap books the itinerary. Stevie keeps watch on every leg after.",
     },
   ],
 } as const;
@@ -103,51 +103,51 @@ export const howItWorks = {
 export const features = {
   eyebrow: "What's inside",
   headingPrefix: "An agent in your pocket.",
-  headingEmphasis: "Real shares on every leg.",
+  headingEmphasis: "Honest prices on every leg.",
   lede:
-    "Stevie fixes the two things travelers actually complain about: planning takes forever, and the rewards you earn quietly lose their value.",
+    "Stevie fixes the two things travelers actually complain about: planning takes forever, and agents cost a fortune.",
   cards: [
     {
       tag: "Concierge chat",
-      title: "Plan like you'd talk to a friend who knows every airline and hotel.",
-      body: "Speak naturally — \"3 nights in Lisbon mid-May\" — and Stevie handles the rest. It remembers your preferences, finds real options, and books in a tap.",
+      title: "Plan like you would with a friend who knows every airline schedule.",
+      body: "Speak naturally — \"beaches in November, no 12-hour flights\" — and Stevie handles the rest. It remembers what you liked last time, too.",
     },
     {
-      tag: "35% back",
-      title: "Every booking puts real shares in your account.",
-      body: "We earn from commissions — same way travel agencies have for sixty years. The difference: we hand 35% of that margin back to you as fractional S&P 500 shares. The more you travel, the more you own.",
+      tag: "Best rates",
+      title: "Lowest fares online, with no agent fee.",
+      body: "Most travel agents charge $50–$100 per booking. Stevie earns from airline and hotel commissions — so you get the best rate available, and nothing extra to us.",
     },
   ],
-  portfolioCard: {
-    label: "Your portfolio",
-    total: "$38.85",
-    entries: [
-      { trip: "Barcelona", fractional: "0.041 VOO", amount: "+$8.40" },
-      { trip: "Miami", fractional: "0.087 VOO", amount: "+$17.80" },
-      { trip: "Lisbon", fractional: "0.062 VOO", amount: "+$12.65" },
-    ],
-    caption: "35% of Stevie's margin · every trip",
+  savingsBar: {
+    label: "Same trip",
+    agentLabel: "Typical travel agent",
+    agentPrice: "$1,201",
+    stevieLabel: "With Stevie",
+    steviePrice: "$1,026",
+    savingsLabel: "You save",
+    savings: "$175",
+    steviePct: 85.4,
   },
 } as const;
 
 export const rewardsTeaser = {
   tag: "Coming soon",
-  text: "35% of every booking margin goes into your S&P 500 account —",
-  emphasis: "not expiring miles.",
+  text: "Rewards that don't lose value to inflation —",
+  emphasis: "they grow with it.",
   linkLabel: "Learn more",
   linkHref: "/rewards",
 } as const;
 
 export const portfolio = {
-  eyebrow: "The rewards rethink",
-  headingPrefix: "Points expire.",
-  headingEmphasis: "Shares don't.",
+  eyebrow: "The Rewards Rethink",
+  headingPrefix: "Points that",
+  headingEmphasis: "actually pay you back.",
   body:
-    "Airlines devalue miles on a schedule you don't control. Hotel rewards stop working when you need them most. Stevie runs the other way. Every booking puts a real asset in your name — something that grows while you're not looking, and that nobody can take back.",
+    "Forget watching your miles depreciate. Every Stevie booking earns credit at a flat 4¢-per-dollar rate, redeemable as cash-style balance — toward your next trip, or sent straight to your bank.",
   stats: [
-    { k: "35%", v: "of our margin, every booking" },
-    { k: "VOO · SPY", v: "fractional S&P 500, in your name" },
-    { k: "Alpaca", v: "SEC-registered broker-dealer" },
+    { k: "4¢", v: "per dollar, every booking" },
+    { k: "0", v: "blackout dates, ever" },
+    { k: "Cash", v: "redeemable, not points" },
   ],
 } as const;
 
@@ -155,31 +155,27 @@ export const faq = {
   eyebrow: "FAQ",
   headingPrefix: "Questions,",
   headingEmphasis: "answered.",
-  lede: "Still curious? Drop us a line — a real person writes back within a day.",
+  lede: "Still curious? Drop us a line — a real human (named Stevie, naturally) writes back within a day.",
   items: [
     {
-      question: "How does Stevie make money?",
+      question: "How is Stevie different from a regular booking site?",
       answer:
-        "We book your travel at wholesale rates and charge a small margin, the way online travel agencies have for twenty years. The difference is we hand 35% of that margin back to you as S&P 500 shares instead of keeping it.",
+        "Booking sites give you a search box. Stevie acts like a friend who happens to know every flight schedule and hotel — planning the whole trip in plain English, and watching it after you book.",
     },
     {
-      question: "Do I need to open a brokerage account?",
+      question: "Why are Stevie's rates so competitive?",
       answer:
-        "We open one for you through Alpaca, an SEC-registered broker-dealer. Verification takes a few minutes and happens the first time you visit your portfolio — it doesn't block your first booking.",
+        "Stevie pulls live fares from every major airline and hotel at once — so you always see the lowest available rate. And unlike most travel agents (who charge $50–$100 per booking), Stevie never adds a fee. We earn the same way agencies have for 60 years: small commissions from airlines and hotels.",
     },
     {
-      question: "Can I withdraw the shares?",
+      question: "Does Stevie have a rewards program?",
       answer:
-        "Yes. The account is yours. You can transfer out to another brokerage, sell, or hold indefinitely — same as any other brokerage account.",
+        "A rewards program is on the way. The idea: your points auto-invest into a money market fund or an S&P index, so they hold their value over time instead of losing it to inflation. We'll share details closer to launch.",
     },
     {
-      question: "What happens if the market drops?",
+      question: "What happens if my flight gets delayed or cancelled?",
       answer:
-        "Share prices move up and down. Stevie does not guarantee returns. Unlike points, though, your shares cannot be devalued or expired by a loyalty program.",
-    },
-    {
-      question: "When does this launch?",
-      answer: "Q2 2026 in New York. Early access is open.",
+        "Stevie monitors your itinerary in real time. If something changes, it proposes a rebooking before the airline gets to you — and handles the rest after you tap confirm.",
     },
   ],
 } as const;
@@ -197,16 +193,19 @@ export const dispatch = {
 } as const;
 
 export const footerContent = {
-  tagline: "Your AI travel concierge. Book trips, earn equity.",
-  disclosure:
-    "Securities are offered through Alpaca Securities LLC, member FINRA/SIPC. Stevie AI LLC is not a broker-dealer. Investing involves risk, including loss of principal.",
-  copyright: `© ${new Date().getFullYear()} Stevie AI LLC · New York`,
+  tagline: "Your AI travel concierge. Plan trips faster. Book at honest rates.",
+  copyright: "© 2026 Stevie Travel, Inc. · Made for travelers.",
+  socials: [
+    { label: "Twitter", href: "#" },
+    { label: "Instagram", href: "#" },
+    { label: "TikTok", href: "#" },
+  ],
   columns: [
     {
       heading: "Product",
       links: [
-        { label: "How it works", href: "/#how-it-works" },
-        { label: "Portfolio", href: "/#portfolio" },
+        { label: "How it works", href: "/#how" },
+        { label: "Features", href: "/#features" },
         { label: "Rewards", href: "/rewards" },
         { label: "For business", href: "/for-business" },
         { label: "Mobile app", href: "/mobile-app" },
@@ -237,28 +236,22 @@ export const footerContent = {
 export const aboutContent = {
   eyebrow: "About",
   title: "Travel that",
-  titleEmphasis: "pays you back.",
+  titleEmphasis: "works for you.",
   lede:
-    "Stevie is the travel concierge most of us couldn't afford to have — built around one idea: the rewards you earn should be worth something, and planning a trip shouldn't take a weekend.",
+    "Stevie is the travel concierge most of us couldn't afford to have — built around one idea: planning a trip shouldn't take a weekend, and booking it shouldn't cost extra.",
   sections: [
     {
       heading: "Why we built Stevie",
       body: [
-        "Most of us travel a handful of times a year. We spend hours comparing fares across tabs, second-guessing the timing, and trying to remember whether our points expire. Then we get home, exhausted, and the miles sit unused for years — quietly losing value to inflation.",
+        "Most of us travel a handful of times a year. We spend hours comparing fares across tabs, second-guessing the timing, and trying to remember which card earns points on hotels. Then we get home and the miles sit unused for years.",
         "Travel agents used to fix the planning problem. A good agent knew schedules, prices, what was worth your money, and how to put a trip together fast. They charged a fee, and they were worth it — for people who could afford it.",
-        "Stevie is that agent, for everyone. Describe the trip in plain English, get real options back, confirm in one tap. And every booking earns you fractional S&P 500 shares in your own brokerage account — not miles, not points, not coupons. Real shares, in your name, that nobody can take away.",
+        "Stevie is that agent, for everyone. Describe the trip in plain English, get real options back, confirm in one tap. No fee, no markup, no redirects.",
       ],
     },
     {
       heading: "How we make money",
       body: [
-        "Stevie earns small commissions from airlines and hotels — the same way travel agencies have for sixty years. We never mark up the price you pay, and we don't sell your data. On each booking, we hand 35% of our margin back to you as fractional VOO or SPY. The more you travel, the more you own.",
-      ],
-    },
-    {
-      heading: "The brokerage account",
-      body: [
-        "Shares go into a real account in your name, held through Alpaca Securities LLC, an SEC-registered broker-dealer and FINRA/SIPC member. You can check the balance, transfer out, sell, or hold indefinitely — same as any brokerage account. Stevie does not hold or control your shares.",
+        "Stevie earns small commissions from airlines and hotels — the same way travel agencies have for sixty years. We never mark up the price you pay, and we don't sell your data.",
       ],
     },
     {
@@ -383,7 +376,7 @@ export const rewardsTermsContent = {
       id: "auto-invest",
       heading: "Auto-invest",
       body: [
-        "Points are automatically allocated to an investment vehicle of your choice — typically a money market fund or a low-cost S&P index fund — through a regulated brokerage partner.",
+        "Points are automatically set aside in an account of your choice, growing in value rather than sitting idle.",
         "The goal is to preserve and grow the value of your points relative to inflation. Like any investment, returns are not guaranteed and the value of your balance may fluctuate.",
       ],
     },

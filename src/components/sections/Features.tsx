@@ -3,8 +3,8 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { features } from "@/lib/content";
 
 export function Features() {
-  const [chat, equity] = features.cards;
-  const pc = features.portfolioCard;
+  const [chat, bestRates] = features.cards;
+  const sb = features.savingsBar;
 
   return (
     <section id="features" className="py-10">
@@ -41,46 +41,64 @@ export function Features() {
             </div>
           </div>
 
-          {/* Equity card */}
+          {/* Best rates card */}
           <div className="flex flex-col gap-5 rounded-[12px] border border-[var(--rule)] bg-paper p-8">
             <div>
               <span className="mb-[14px] block font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-cobalt">
-                {equity.tag}
+                {bestRates.tag}
               </span>
               <h3 className="text-[22px] leading-[1.18] tracking-[-0.01em] text-cobalt-ink">
-                {equity.title}
+                {bestRates.title}
               </h3>
               <p className="mt-2.5 max-w-[38ch] text-[14.5px] leading-[1.55] text-ink-soft">
-                {equity.body}
+                {bestRates.body}
               </p>
             </div>
 
-            {/* Portfolio mini-card */}
+            {/* Savings bar */}
             <div className="mt-auto rounded-[12px] border border-[var(--rule)] bg-cream-warm p-[18px_22px]">
               <div className="mb-[14px] flex items-baseline justify-between">
                 <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
-                  {pc.label}
+                  {sb.label}
                 </span>
-                <span className="font-display text-[22px] text-cobalt-ink">{pc.total}</span>
+                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
+                  Total cost
+                </span>
               </div>
-              {pc.entries.map((e) => (
-                <div
-                  key={e.trip}
-                  className="flex items-center justify-between border-t border-[var(--rule)] py-[10px]"
-                >
-                  <div>
-                    <div className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-cobalt">
-                      {e.trip}
-                    </div>
-                    <div className="mt-0.5 text-[12px] text-ink-soft">{e.fractional}</div>
-                  </div>
-                  <span className="font-display text-[16px] text-[#1F8A5B]">{e.amount}</span>
+
+              {/* Agent row */}
+              <div className="mb-[10px]">
+                <div className="mb-1.5 flex items-baseline justify-between">
+                  <span className="text-[13.5px] text-ink-soft">{sb.agentLabel}</span>
+                  <span className="font-display text-[18px] text-ink-soft line-through decoration-[var(--rule-strong)]">
+                    {sb.agentPrice}
+                  </span>
                 </div>
-              ))}
-              <div className="mt-1.5 border-t border-dashed border-[var(--rule)] pt-3">
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-cobalt">
-                  {pc.caption}
+                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
+                  <div className="h-full w-full bg-[var(--rule-strong)] opacity-50" />
+                </div>
+              </div>
+
+              {/* Stevie row */}
+              <div className="mb-[14px]">
+                <div className="mb-1.5 flex items-baseline justify-between">
+                  <span className="text-[13.5px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
+                  <span className="font-display text-[24px] text-cobalt-ink">{sb.steviePrice}</span>
+                </div>
+                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
+                  <div
+                    className="h-full bg-cobalt"
+                    style={{ width: `${sb.steviePct}%` }}
+                  />
+                </div>
+              </div>
+
+              {/* Savings */}
+              <div className="flex items-baseline justify-between border-t border-dashed border-[var(--rule)] pt-3">
+                <span className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-cobalt">
+                  {sb.savingsLabel}
                 </span>
+                <span className="font-display text-[20px] text-cobalt">{sb.savings}</span>
               </div>
             </div>
           </div>

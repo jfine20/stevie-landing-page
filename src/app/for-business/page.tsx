@@ -13,7 +13,7 @@ const perks = [
   },
   {
     heading: "Every trip earns equity.",
-    body: "Company bookings can earn fractional S&P 500 shares for your employees or your company account — the reward that doesn't expire.",
+    body: "Every company booking earns cash-back rewards for your employees or your company account — the reward that doesn't expire.",
   },
   {
     heading: "Concierge on call.",

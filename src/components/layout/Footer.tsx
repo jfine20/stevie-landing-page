@@ -40,19 +40,16 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 flex flex-col gap-3 border-t border-[var(--rule)] pt-6 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="text-[12.5px] tracking-[0.04em] text-ink-soft">
-              {footerContent.copyright}
-            </p>
-            <p className="mt-1.5 max-w-[72ch] text-[11px] leading-[1.5] text-ink-soft/75">
-              {footerContent.disclosure}
-            </p>
-          </div>
+        <div className="mt-14 flex flex-col gap-3 border-t border-[var(--rule)] pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[12.5px] tracking-[0.04em] text-ink-soft">
+            {footerContent.copyright}
+          </p>
           <div className="flex gap-[18px] text-[12.5px] text-ink-soft">
-            <a href="#" className="hover:text-cobalt transition-colors">Twitter</a>
-            <a href="#" className="hover:text-cobalt transition-colors">Instagram</a>
-            <a href="#" className="hover:text-cobalt transition-colors">TikTok</a>
+            {footerContent.socials.map((s) => (
+              <a key={s.label} href={s.href} className="transition-colors hover:text-cobalt">
+                {s.label}
+              </a>
+            ))}
           </div>
         </div>
       </Container>

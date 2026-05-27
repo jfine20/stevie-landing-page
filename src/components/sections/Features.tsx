@@ -52,37 +52,47 @@ export function Features() {
             </p>
 
             {/* Savings comparison */}
-            <div className="mt-6 overflow-hidden rounded-[12px] border border-[var(--rule)]">
+            <div className="mt-6 rounded-[12px] border border-[var(--rule)] bg-cream-warm p-[18px_22px]">
               {/* Header */}
-              <div className="flex items-center justify-between bg-cream-warm px-5 py-3">
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-soft">
+              <div className="mb-[14px] flex items-baseline justify-between">
+                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
                   {sb.label}
                 </span>
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-soft">
+                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
                   Total cost
                 </span>
               </div>
 
               {/* Agent row */}
-              <div className="flex items-center justify-between border-t border-[var(--rule)] bg-paper px-5 py-4">
-                <span className="text-[14px] text-ink-soft">{sb.agentLabel}</span>
-                <span className="font-display text-[20px] text-ink-soft/60 line-through">
-                  {sb.agentPrice}
-                </span>
+              <div className="mb-[14px]">
+                <div className="mb-1.5 flex items-baseline justify-between">
+                  <span className="text-[13.5px] text-ink-soft">{sb.agentLabel}</span>
+                  <span className="font-display text-[18px] text-ink-soft line-through decoration-[var(--rule-strong)]">
+                    {sb.agentPrice}
+                  </span>
+                </div>
+                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
+                  <div className="h-full w-full bg-[var(--rule-strong)] opacity-50" />
+                </div>
               </div>
 
-              {/* Stevie row — highlighted */}
-              <div className="flex items-center justify-between border-t border-[var(--rule)] bg-cobalt/[0.05] px-5 py-4">
-                <span className="text-[14px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
-                <span className="font-display text-[20px] text-cobalt-ink">{sb.steviePrice}</span>
+              {/* Stevie row */}
+              <div className="mb-[14px]">
+                <div className="mb-1.5 flex items-baseline justify-between">
+                  <span className="text-[13.5px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
+                  <span className="font-display text-[24px] text-cobalt-ink">{sb.steviePrice}</span>
+                </div>
+                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
+                  <div className="h-full bg-cobalt" style={{ width: `${sb.steviePct}%` }} />
+                </div>
               </div>
 
-              {/* You save row */}
-              <div className="flex items-center justify-between bg-cobalt px-5 py-4">
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-cream/80">
+              {/* You save */}
+              <div className="flex items-baseline justify-between border-t border-dashed border-[var(--rule)] pt-[12px]">
+                <span className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-cobalt">
                   {sb.savingsLabel}
                 </span>
-                <span className="font-display text-[26px] text-cream">{sb.savings}</span>
+                <span className="font-display text-[22px] text-cobalt">{sb.savings}</span>
               </div>
             </div>
           </div>

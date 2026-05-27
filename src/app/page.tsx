@@ -6,7 +6,6 @@ import { TryIt } from "@/components/sections/TryIt";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Features } from "@/components/sections/Features";
 import { RewardsTeaser } from "@/components/sections/RewardsTeaser";
-import { Portfolio } from "@/components/sections/Portfolio";
 import { FAQ } from "@/components/sections/FAQ";
 import { Dispatch } from "@/components/sections/Dispatch";
 
@@ -21,7 +20,6 @@ export default function HomePage() {
         <HowItWorks />
         <Features />
         <RewardsTeaser />
-        <Portfolio />
         <FAQ />
         <Dispatch />
       </main>

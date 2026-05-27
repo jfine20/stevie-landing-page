@@ -306,7 +306,7 @@ export const privacyContent = {
     {
       id: "contact",
       heading: "Contact",
-      body: ["Questions? Email hello@stevieai.io and a real person will write back within a few days."],
+      body: ["Questions? Email dev@stevieai.io and a real person will write back within a few days."],
     },
   ] satisfies LegalSection[],
 } as const;
@@ -439,7 +439,7 @@ export const cookiesContent = {
     {
       id: "contact",
       heading: "Questions",
-      body: ["Email hello@stevieai.io."],
+      body: ["Email dev@stevieai.io."],
     },
   ] satisfies LegalSection[],
 } as const;
@@ -475,7 +475,7 @@ export const securityContent = {
       id: "reporting",
       heading: "Reporting vulnerabilities",
       body: [
-        "Found something? Email hello@stevieai.io and we'll respond within one business day. We pay bounties for valid reports.",
+        "Found something? Email dev@stevieai.io and we'll respond within one business day. We pay bounties for valid reports.",
       ],
     },
   ] satisfies LegalSection[],

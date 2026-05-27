@@ -41,7 +41,7 @@ export default function ForBusinessPage() {
               Stevie for teams brings the concierge and the equity rewards to your whole company. Coming in late 2026.
             </p>
             <div className="mt-8">
-              <Button href="mailto:hello@stevieai.io" variant="primary" size="lg">
+              <Button href="mailto:dev@stevieai.io" variant="primary" size="lg">
                 Request early access
               </Button>
             </div>

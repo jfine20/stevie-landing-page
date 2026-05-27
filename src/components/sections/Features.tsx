@@ -52,33 +52,37 @@ export function Features() {
             </p>
 
             {/* Savings comparison */}
-            <div className="mt-6 rounded-[10px] border border-[var(--rule)] bg-cream-warm p-[16px_20px]">
-              <div className="mb-1 flex items-baseline justify-between">
-                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
+            <div className="mt-6 overflow-hidden rounded-[12px] border border-[var(--rule)]">
+              {/* Header */}
+              <div className="flex items-center justify-between bg-cream-warm px-5 py-3">
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-soft">
                   {sb.label}
                 </span>
-                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-soft">
                   Total cost
                 </span>
               </div>
 
-              <div className="flex items-baseline justify-between border-t border-[var(--rule)] py-[10px]">
-                <span className="text-[13.5px] text-ink-soft">{sb.agentLabel}</span>
-                <span className="font-display text-[18px] text-ink-soft line-through decoration-[var(--rule-strong)]">
+              {/* Agent row */}
+              <div className="flex items-center justify-between border-t border-[var(--rule)] bg-paper px-5 py-4">
+                <span className="text-[14px] text-ink-soft">{sb.agentLabel}</span>
+                <span className="font-display text-[20px] text-ink-soft/60 line-through">
                   {sb.agentPrice}
                 </span>
               </div>
 
-              <div className="flex items-baseline justify-between border-t border-[var(--rule)] py-[10px]">
-                <span className="text-[13.5px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
-                <span className="font-display text-[18px] text-cobalt-ink">{sb.steviePrice}</span>
+              {/* Stevie row — highlighted */}
+              <div className="flex items-center justify-between border-t border-[var(--rule)] bg-cobalt/[0.05] px-5 py-4">
+                <span className="text-[14px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
+                <span className="font-display text-[20px] text-cobalt-ink">{sb.steviePrice}</span>
               </div>
 
-              <div className="flex items-baseline justify-between border-t border-dashed border-[var(--rule)] pt-[10px]">
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-cobalt">
+              {/* You save row */}
+              <div className="flex items-center justify-between bg-cobalt px-5 py-4">
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-cream/80">
                   {sb.savingsLabel}
                 </span>
-                <span className="font-display text-[22px] text-cobalt">{sb.savings}</span>
+                <span className="font-display text-[26px] text-cream">{sb.savings}</span>
               </div>
             </div>
           </div>

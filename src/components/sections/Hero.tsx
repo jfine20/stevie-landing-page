@@ -41,7 +41,7 @@ export function Hero() {
                     <div className="w-px flex-shrink-0 bg-[var(--rule)]" />
                   )}
                   <div className="flex min-w-0 flex-1 flex-col gap-2">
-                    <div className="flex items-baseline gap-1.5 font-display text-[clamp(38px,3.8vw,52px)] leading-none tracking-[-0.02em] text-cobalt-ink">
+                    <div className="flex items-baseline gap-1.5 font-display text-[clamp(42px,4.2vw,58px)] leading-none tracking-[-0.02em] text-cobalt-ink">
                       {stat.num}
                       {stat.suffix && (
                         <span className="font-sans text-[16px] font-semibold tracking-[0.01em] text-cobalt">

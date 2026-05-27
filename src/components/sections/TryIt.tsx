@@ -67,7 +67,7 @@ export function TryIt() {
               </svg>
             </div>
             {/* Text */}
-            <div className="min-w-0 flex-1 overflow-hidden whitespace-nowrap font-display text-[clamp(22px,2.4vw,30px)] leading-[1.2] tracking-[-0.01em] text-cobalt-ink text-ellipsis">
+            <div className="min-w-0 flex-1 font-display text-[clamp(22px,2.4vw,30px)] leading-[1.2] tracking-[-0.01em] text-cobalt-ink">
               {text}
               <span className="prompt-caret" />
             </div>

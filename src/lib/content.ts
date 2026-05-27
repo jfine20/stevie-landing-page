@@ -60,11 +60,11 @@ export const tryIt = {
   lede:
     "Tell Stevie exactly what you want — quiet, walkable, under budget, near the water. It searches every airline and hotel at once, and books in a tap.",
   prompts: [
-    "Long weekend somewhere warm, under $900, leaving Friday after work.",
-    "Tokyo in cherry-blossom season, 8 days, mid-budget.",
-    "Quiet beach week in November, direct flights only.",
-    "Family ski trip in Colorado, mid-March, kid-friendly hotel.",
-    "Romantic anniversary in Lisbon — old town, walkable, near the water.",
+    "Warm weekend under $900, leaving Friday.",
+    "Tokyo, cherry-blossom season, 8 days.",
+    "Quiet beach week in November, direct flights.",
+    "Family ski trip, Colorado, mid-March.",
+    "Anniversary in Lisbon — old town, near the water.",
   ],
   chips: [
     { label: "Hotels · live", active: true },

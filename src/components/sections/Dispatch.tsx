@@ -16,43 +16,47 @@ export function Dispatch() {
   }
 
   return (
-    <section className="py-14">
+    <section className="pb-16 pt-6">
       <Container>
-        <div className="mx-auto max-w-[640px] text-center">
-          <Eyebrow>{dispatch.eyebrow}</Eyebrow>
-          <h2 className="mt-[18px] text-[clamp(28px,3vw,40px)] leading-[1.1] tracking-[-0.015em] text-cobalt-ink">
-            {dispatch.headingPrefix}{" "}
-            <em className="italic text-cobalt">{dispatch.headingEmphasis}</em>
-          </h2>
-          <p className="mx-auto mt-3 max-w-[46ch] text-[15px] leading-[1.55] text-ink-soft">
-            {dispatch.lede}
-          </p>
+        <div className="relative overflow-hidden rounded-[12px] bg-cobalt px-12 py-12">
+          <div className="grid items-center gap-14 lg:grid-cols-2">
+            {/* Left — heading */}
+            <div>
+              <Eyebrow light>{dispatch.eyebrow}</Eyebrow>
+              <h2 className="mt-[18px] text-[clamp(30px,3.2vw,44px)] leading-[1.05] tracking-[-0.015em] text-cream">
+                {dispatch.headingPrefix}{" "}
+                <em className="italic text-cream">{dispatch.headingEmphasis}</em>
+              </h2>
+              <p className="mt-4 max-w-[40ch] text-[16px] leading-[1.55] text-cream/80">
+                {dispatch.lede}
+              </p>
+            </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="mx-auto mt-8 flex max-w-[420px] gap-2"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={dispatch.placeholder}
-              disabled={submitted}
-              required
-              className="min-w-0 flex-1 rounded-[10px] border border-[var(--rule)] bg-paper px-4 py-3 text-[14px] text-cobalt-ink placeholder:text-ink-soft/60 focus:border-cobalt/50 focus:outline-none focus:ring-2 focus:ring-cobalt/20 disabled:opacity-60"
-            />
-            <button
-              type="submit"
-              disabled={submitted}
-              className="flex-shrink-0 rounded-[10px] bg-cobalt px-5 py-3 text-[13px] font-semibold text-cream transition-[background-color,transform] duration-150 hover:-translate-y-px hover:bg-cobalt-deep disabled:cursor-default disabled:opacity-70"
-            >
-              {submitted ? dispatch.submitted : dispatch.submit}
-            </button>
-          </form>
-
-          <p className="mt-4 text-[12px] tracking-[0.02em] text-ink-soft/70">
-            {dispatch.fine}
-          </p>
+            {/* Right — email form */}
+            <form onSubmit={handleSubmit}>
+              <div className="flex items-center gap-[10px] rounded-full bg-cream p-1.5">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={dispatch.placeholder}
+                  disabled={submitted}
+                  required
+                  className="min-w-0 flex-1 bg-transparent px-4 py-3 text-[15px] text-cobalt-ink placeholder:text-cobalt-ink/45 focus:outline-none disabled:opacity-60"
+                />
+                <button
+                  type="submit"
+                  disabled={submitted}
+                  className="flex-shrink-0 rounded-full bg-cobalt-ink px-[22px] py-3 text-[14.5px] font-semibold text-cream transition-[background-color,transform] duration-150 hover:-translate-y-px hover:bg-black disabled:cursor-default disabled:opacity-70"
+                >
+                  {submitted ? dispatch.submitted : dispatch.submit}
+                </button>
+              </div>
+              <p className="mt-4 text-[12px] tracking-[0.06em] text-cream/65">
+                {dispatch.fine}
+              </p>
+            </form>
+          </div>
         </div>
       </Container>
     </section>

@@ -4,7 +4,7 @@ import { howItWorks } from "@/lib/content";
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-10">
+    <section id="how" className="py-10">
       <Container>
         <div className="mb-8 grid gap-16 lg:grid-cols-[1.2fr_1fr]">
           <div>

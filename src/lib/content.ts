@@ -30,8 +30,8 @@ export const hero = {
   secondaryCta: { label: "See how it works", href: "#how" },
   stats: [
     { num: "1", suffix: "prompt", label: "Books your whole trip" },
-    { num: "All", suffix: "in one", label: "Flights, hotels, transfers" },
-    { num: "$0", suffix: "fees", label: "Best rates, always" },
+    { num: "All‑", suffix: "in‑one", label: "Flights, hotels, transfers" },
+    { num: "0", suffix: "agent fees", label: "Best rates online, always" },
   ],
   boardingPass: {
     airline: "Stevie",
@@ -306,7 +306,7 @@ export const privacyContent = {
     {
       id: "contact",
       heading: "Contact",
-      body: ["Questions? Email dev@stevieai.io and a real person will write back within a few days."],
+      body: ["Questions? Email jack@stevieai.io and a real person will write back within a few days."],
     },
   ] satisfies LegalSection[],
 } as const;
@@ -439,7 +439,7 @@ export const cookiesContent = {
     {
       id: "contact",
       heading: "Questions",
-      body: ["Email dev@stevieai.io."],
+      body: ["Email jack@stevieai.io."],
     },
   ] satisfies LegalSection[],
 } as const;
@@ -475,7 +475,7 @@ export const securityContent = {
       id: "reporting",
       heading: "Reporting vulnerabilities",
       body: [
-        "Found something? Email dev@stevieai.io and we'll respond within one business day. We pay bounties for valid reports.",
+        "Found something? Email jack@stevieai.io and we'll respond within one business day. We pay bounties for valid reports.",
       ],
     },
   ] satisfies LegalSection[],

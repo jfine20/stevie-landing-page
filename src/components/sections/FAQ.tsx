@@ -5,67 +5,58 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { faq } from "@/lib/content";
 
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden
-      className={`flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-    >
-      <path
-        d="M6 9l6 6 6-6"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export function FAQ() {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number>(0); // first item open by default
 
   return (
-    <section id="faq" className="py-14">
+    <section id="faq" className="py-10">
       <Container>
-        <div className="mx-auto max-w-[800px]">
-          {/* Head */}
-          <div className="mb-10 text-center">
+        <div className="grid items-start gap-[88px] lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Left — heading + description */}
+          <div>
             <Eyebrow>{faq.eyebrow}</Eyebrow>
-            <h2 className="mt-[18px] text-[clamp(34px,3.6vw,48px)] leading-[1.04] tracking-[-0.015em] text-cobalt-ink">
+            <h2 className="mt-[18px] text-[clamp(34px,3.6vw,48px)] leading-[1.05] tracking-[-0.015em] text-cobalt-ink">
               {faq.headingPrefix}{" "}
               <em className="italic text-cobalt">{faq.headingEmphasis}</em>
             </h2>
-            <p className="mx-auto mt-3 max-w-[48ch] text-[15px] leading-[1.5] text-ink-soft">
+            <p className="mt-[18px] max-w-[36ch] text-[15px] leading-[1.55] text-ink-soft">
               {faq.lede}
             </p>
           </div>
 
-          {/* Accordion */}
-          <div className="divide-y divide-[var(--rule)] border-y border-[var(--rule)]">
+          {/* Right — accordion */}
+          <div className="border-t border-[var(--rule-strong)]">
             {faq.items.map((item, i) => (
-              <div key={i}>
+              <div key={i} className="border-b border-[var(--rule-strong)]">
                 <button
-                  className="flex w-full items-center justify-between gap-6 py-[18px] text-left"
-                  onClick={() => setOpen(open === i ? null : i)}
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                  onClick={() => setOpen(open === i ? -1 : i)}
                   aria-expanded={open === i}
                 >
-                  <span className="text-[16px] font-medium leading-[1.35] text-cobalt-ink">
+                  <span className="font-display text-[20px] leading-[1.25] text-cobalt-ink">
                     {item.question}
                   </span>
-                  <ChevronIcon open={open === i} />
+                  {/* Circle +/× toggle */}
+                  <span
+                    className={`grid size-7 flex-shrink-0 place-items-center rounded-full border text-lg font-light transition-all duration-200 ${
+                      open === i
+                        ? "rotate-45 border-cobalt bg-cobalt text-cream"
+                        : "border-[var(--rule-strong)] bg-transparent text-cobalt-ink"
+                    }`}
+                    aria-hidden
+                  >
+                    +
+                  </span>
                 </button>
-                {open === i && (
-                  <div className="pb-[18px]">
-                    <p className="max-w-[66ch] text-[14.5px] leading-[1.6] text-ink-soft">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                <div
+                  className={`overflow-hidden transition-[max-height,padding] duration-300 ${
+                    open === i ? "max-h-96 pb-6" : "max-h-0"
+                  }`}
+                >
+                  <p className="max-w-[56ch] text-[15.5px] leading-[1.6] text-ink-soft">
+                    {item.answer}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

@@ -64,35 +64,33 @@ export function Features() {
               </div>
 
               {/* Agent row */}
-              <div className="mb-[14px]">
-                <div className="mb-1.5 flex items-baseline justify-between">
+              <div className="mb-[18px]">
+                <div className="mb-2 flex items-baseline justify-between">
                   <span className="text-[13.5px] text-ink-soft">{sb.agentLabel}</span>
-                  <span className="font-display text-[18px] text-ink-soft line-through decoration-[var(--rule-strong)]">
+                  <span className="font-display text-[18px] text-ink-soft" style={{ textDecoration: "line-through", textDecorationColor: "rgba(0,31,74,0.45)" }}>
                     {sb.agentPrice}
                   </span>
                 </div>
-                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
-                  <div className="h-full w-full bg-[var(--rule-strong)] opacity-50" />
-                </div>
+                <div className="h-[8px] w-full rounded-full bg-[rgba(0,31,74,0.12)]" />
               </div>
 
               {/* Stevie row */}
-              <div className="mb-[14px]">
-                <div className="mb-1.5 flex items-baseline justify-between">
-                  <span className="text-[13.5px] font-semibold text-cobalt-ink">{sb.stevieLabel}</span>
-                  <span className="font-display text-[24px] text-cobalt-ink">{sb.steviePrice}</span>
+              <div className="mb-[18px]">
+                <div className="mb-2 flex items-baseline justify-between">
+                  <span className="text-[14px] font-bold text-cobalt-ink">{sb.stevieLabel}</span>
+                  <span className="font-display text-[26px] leading-none text-cobalt-ink">{sb.steviePrice}</span>
                 </div>
-                <div className="h-[6px] overflow-hidden rounded-full border border-[var(--rule)] bg-paper">
-                  <div className="h-full bg-cobalt" style={{ width: `${sb.steviePct}%` }} />
+                <div className="h-[8px] w-full overflow-hidden rounded-full bg-[rgba(0,31,74,0.12)]">
+                  <div className="h-full rounded-full bg-cobalt" style={{ width: `${sb.steviePct}%` }} />
                 </div>
               </div>
 
               {/* You save */}
-              <div className="flex items-baseline justify-between border-t border-dashed border-[var(--rule)] pt-[12px]">
+              <div className="flex items-baseline justify-between border-t border-dashed border-[rgba(0,31,74,0.2)] pt-[14px]">
                 <span className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-cobalt">
                   {sb.savingsLabel}
                 </span>
-                <span className="font-display text-[22px] text-cobalt">{sb.savings}</span>
+                <span className="font-display text-[24px] text-cobalt">{sb.savings}</span>
               </div>
             </div>
           </div>
